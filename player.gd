@@ -42,9 +42,6 @@ func cost_dx_and_iq(x)
 func cost_st_and_ht(x)
 	var diferenca_x = x - 10
 	return 10 * diferenca_x
-	
-func dano
-	return 
 
 func matriz_dano_bal(st)
 	return 20*x
