@@ -18,6 +18,9 @@ var pj_dano_gdp =
 
 
 func _physics_process(_delta):
+
+	var Hud = $"../Panel/Vars"
+	
 	var motion = Vector2()
 	
 	if Input.is_action_pressed("move_up"):
@@ -43,13 +46,39 @@ func cost_st_and_ht(x)
 	var diferenca_x = x - 10
 	return 10 * diferenca_x
 
-func matriz_dano_bal(st)
-	return 20*x
-	
-func matirz_dano_gpp(st)
+func matriz_dano_gdp(st)
 	match st:
-		1:
-			return 
+		[ 1 , 2 ]:
+			return [1,-6]
+		[ 3 , 4 ]:
+			return [1,-5]
+		[ 5 , 6 ]:
+			return [1,-4]
+		[ 7 , 8 ]:
+			return [1,-3]
+		[ 9 , 10 ]:
+			return [1,-2]
+	
+func matrIz_dano_bal(st)
+	match st:
+		[ 1 , 2 ]:
+			return [1,-5]
+		[ 3 , 4 ]:
+			return [1,-4]
+		[ 5 , 6 ]:
+			return [1,-3]
+		[ 7 , 8 ]:
+			return [1,-2]
+		[ 9 ]:
+			return [1,-1]
+		[ 10 ]:
+			return [1,0]
+		[ 11 ]:
+			return [1,1]
+		[ 12 ]:
+			return [1,2]
 		
+func update_hud (hud, string_var)
+	hud.text = "Debug: " + string_var
 	
 	
