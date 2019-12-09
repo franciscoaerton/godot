@@ -17,7 +17,7 @@ func cost_dx_and_iq(x):
 
 # retorna um array com [ num_dados_d6, + modificador]
 
-func matriz_dano_gdp(st):
+func matriz_dano_bal(st):
 	match st:
 		1:
 			return [1,-5]
@@ -60,71 +60,72 @@ func matriz_dano_gdp(st):
 		20:
 			return [3,+2]
 		21:
-			return [2,0]
+			return [4,-1]
 		22:
-			return [2,0]
-		23:
-			return [2,+1]
-		24:
-			return [2,+1]
-		25:
-            		return [2,+2]
-		26:
-            		return [2,+2]
-        	27:
-			return [3,-1]
-		28:
-			return [3,-1]    
-        	29:
-			return [3,0]
-		30:
-			return [3,0]
-        	31:
-			return [3,+1]
-		32:
-			return [3,+1]
-		33:
-			return [3,+2]
-		34:
-			return [3,+2]
-		35:
-			return [4,-1]
-		36:
-			return [4,-1]
-		37:
 			return [4,0]
-		38:
-			return [4,0]    
-        	39:
+		23:
 			return [4,+1]
-		40:
-            		return [4,+1]
-		45:
-			return [5,0]
-		50:
+		24:
+			return [4,+2]
+		25:
+            		return [5,-1]
+		26:
+            		return [5,0]
+        	27:
+			return [5,+1]
+		28:
+			return [5,+1]    
+        	29:
 			return [5,+2]
-		55:
+		30:
+			return [5,+2]
+        	31:
+			return [6,-1]
+		32:
+			return [6,-1]
+		33:
 			return [6,0]
-		60:
+		34:
+			return [6,0]
+		35:
+			return [6,+1]
+		36:
+			return [6,+1]
+		37:
+			return [6,+2]
+		38:
+			return [6,+2]    
+        	39:
 			return [7,-1]
-		65:
+		40:
+            		return [7,-1]
+		45:
 			return [7,+1]
-		70:
-			return [8,0]
-		75:
-			return [8,+2]
-		80:
-			return [9,0]    
-        	85:
+		50:
+			return [8,-1]
+		55:
+			return [8,+1]
+		60:
 			return [9,+2]
-		90:
+		65:
+			return [9,+2]
+		70:
 			return [10,0]
-		95:
+		75:
 			return [10,+2]
+		80:
+			return [11,0]    
+        	85:
+			return [11,+2]
+		90:
+			return [12,0 ]
+		95:
+			return [12,+1]
 		100:
-			return [11,0]
+			return [13,0]
+			
 # dano básico por balanço . retorna um array com [ num_dados_d6, + modificador]			
-func matriz_dano_bal(st):
+func matriz_dano_gdp(st):
 	match st:
 		1:
 			return [1,-6]
