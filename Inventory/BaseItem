@@ -1,0 +1,18 @@
+extends Node2D
+
+var ItemName 
+var MaxAmount 
+var Amount 
+
+#GDScript has this constructor like python, _init
+func _init(InItemName, InMaxAmount, InAmount):
+	 ItemName = InItemName
+	 MaxAmount = InMaxAmount
+	 Amount = InAmount
+
+func WhatIsMyName():
+	print(ItemName)
+
+#GDScript also uses duck-typing
+func DoItemThing():
+	print("If you are reading this, you somehow got the basic item class")
