@@ -1,0 +1,23 @@
+Inventory class:
+
+extends Node
+
+#The axe and sword are attached to objects in the scene 
+#so we bring them in with exports
+export(NodePath) var PathToNodeWithSword
+export(NodePath) var PathToNodeWithAxe
+
+var Inventory = [] as Array
+
+func _ready():
+	#Add the code sword
+	Inventory.append( TheCodeSword.new() )
+	#One more:
+	Inventory.append( TheCodeSword.new() )
+	#Lets also use each items unique item function:
+	var Index = Inventory.size()
+	while (Index > 0 ):
+		Index -= 1
+		#We use duck-typing to just call the function that we know each item has
+		if Inventory[Index].has_method("DoItemThing"):
+			Inventory[Index].DoItemThing()
