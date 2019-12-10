@@ -3,13 +3,23 @@ extends Node
 #We can direct link resources, don't need the paths
 export (Resource) var TheCodeSword
 
-var Inventory = [] as Array
+var Chests = [] as Array
+var Bags = [] as Array
+var Doors = [] as Array
+var Ladders = [] as Array
+var Keys = [] as Array
+var Enimies = [] as Array
+var Bosses = [] as Array
+var Reactions = [] as Array
+var Itens = [] as Array
+var Locations = [] as Array
+
+
 
 func _ready():
 	#Add the code sword
-	Inventory.append( TheCodeSword.new() )
-	#One more:
-	Inventory.append( TheCodeSword.new() )
+	Chests.append( TheCodeSword.new() )
+	
 	#Lets also use each items unique item function:
 	var Index = Inventory.size()
 	while (Index > 0 ):
